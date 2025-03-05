@@ -1,0 +1,120 @@
+.about-container {
+	max-width: 1400px;
+	margin: 4rem auto;
+	padding: 0 2rem;
+}
+
+.about-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 4rem;
+	align-items: start;
+}
+
+.about-text {
+	position: sticky;
+	top: 100px;
+}
+
+.about-text h1 {
+	font-size: 2rem;
+	margin-bottom: 2rem;
+	font-weight: normal;
+}
+
+.bio-text p {
+	margin-bottom: 1.5rem;
+	line-height: 1.8;
+	font-size: 1.1rem;
+}
+
+.about-images {
+	display: flex;
+	flex-direction: column;
+	gap: 4rem;
+}
+
+.image-container {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+
+.about-image {
+	width: 100%;
+	height: auto;
+	display: block;
+	transition: transform 0.3s ease;
+}
+
+.image-container:hover .about-image {
+	transform: scale(1.02);
+}
+
+/* Animation for text appearance */
+.bio-text p {
+	opacity: 0;
+	transform: translateY(20px);
+	animation: fadeInUp 0.6s ease forwards;
+}
+
+.bio-text p:nth-child(2) {
+	animation-delay: 0.2s;
+}
+
+.bio-text p:nth-child(3) {
+	animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+	.about-grid {
+		gap: 2rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.about-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.about-text {
+		position: static;
+	}
+
+	.about-images {
+		gap: 2rem;
+	}
+
+	.about-container {
+		margin: 2rem auto;
+	}
+}
+
+/* Optional: Add a subtle loading animation for images */
+.about-image {
+	opacity: 0;
+	animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
