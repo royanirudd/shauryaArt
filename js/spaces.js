@@ -1,6 +1,7 @@
 const gifContainer = document.querySelector('.gif-container');
 const textSections = document.querySelectorAll('.text-section');
-const maxScroll = 600; // Increased for slower expansion
+const maxScroll = 600;
+const mainNav = document.querySelector('.main-nav');
 
 // Add a spacer div to enable scrolling
 const spacerDiv = document.createElement('div');
@@ -16,29 +17,27 @@ textContainer.style.left = '50%';
 textContainer.style.transform = 'translate(-50%, -50%)';
 textContainer.style.width = '80%';
 textContainer.style.zIndex = '2';
-textContainer.style.color = 'white'; // Make text visible over video
+textContainer.style.color = 'white';
 textContainer.style.textAlign = 'center';
-textContainer.style.pointerEvents = 'none'; // Prevents text from being clickable until visible
+textContainer.style.pointerEvents = 'none';
+
+// Make header transparent initially on index page and keep it transparent
+mainNav.classList.add('transparent');
 
 window.addEventListener('scroll', () => {
 	const currentScroll = window.pageYOffset;
-
-	// Calculate expansion progress (0 to 1)
 	const progress = Math.min(currentScroll / maxScroll, 1);
 
 	// Handle gif expansion
 	if (currentScroll <= maxScroll) {
-		// Start from center square/rectangle
 		const startWidth = 300;
 		const startHeight = 300;
 		const finalWidth = window.innerWidth;
 		const finalHeight = window.innerHeight;
 
-		// Calculate current dimensions
 		const width = startWidth + (finalWidth - startWidth) * progress;
 		const height = startHeight + (finalHeight - startHeight) * progress;
 
-		// Apply styles
 		gifContainer.style.width = `${width}px`;
 		gifContainer.style.height = `${height}px`;
 		gifContainer.style.position = 'fixed';
@@ -48,6 +47,6 @@ window.addEventListener('scroll', () => {
 	}
 
 	// Handle text visibility
-	const textOpacity = Math.max(0, (progress - 0.8) * 5); // Start fading in at 80% expansion
+	const textOpacity = Math.max(0, (progress - 0.8) * 5);
 	textContainer.style.opacity = textOpacity;
 });
