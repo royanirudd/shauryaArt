@@ -22,7 +22,7 @@ body {
 	top: 0;
 	left: 0;
 	width: 100%;
-	padding: 2rem;
+	padding: 2.5rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -40,23 +40,24 @@ body {
 
 .nav-center {
 	justify-content: center;
+	font-size: 1.2rem;
 }
 
 .nav-right {
 	justify-content: flex-end;
-	gap: 2rem;
+	gap: 3rem;
 }
 
 /* Name link specific styles */
 .name-link {
-	font-size: 2.5rem;
-	font-weight: 300;
+	font-size: 2rem;
+	font-weight: 400;
 	transition: all 0.8s ease;
+	letter-spacing: 0.05em;
 }
 
-.name-link span {
-	display: inline-block;
-	transition: opacity 0.8s ease;
+.name-link::after {
+	display: none;
 }
 
 /* Link styles */
@@ -68,6 +69,7 @@ a {
 
 .nav-link {
 	font-weight: 200;
+	font-size: 1.2rem;
 }
 
 a::after {
@@ -88,64 +90,149 @@ a:hover::after {
 	transform-origin: right;
 }
 
+/* Social links section */
+.social-links {
+	display: flex;
+	justify-content: center;
+	gap: 3rem;
+	padding: 2rem;
+}
+
+.social-link {
+	font-size: 1.2rem;
+}
+
+/* Location time style */
+.location-time {
+	font-size: 1.2rem;
+}
+
 /* Main content styles */
 .content {
 	margin-top: 80px;
 	flex-grow: 1;
 	padding: 0 2rem;
+	position: relative;
+	width: 100%;
+}
+
+/* Work page specific content */
+.work-content {
+	padding: 0;
+	margin-top: 80px;
+	height: auto;
 }
 
 .gif-container {
 	width: 300px;
 	height: 300px;
-	margin: 2rem auto;
-	transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-	position: absolute;
+	position: fixed;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	z-index: 1;
 }
 
-.gif-container.expanded {
+.main-video {
 	width: 100%;
-	height: 100vh;
-	margin: 0;
-	top: 0;
-	left: 0;
-	transform: none;
+	height: 100%;
+	object-fit: cover;
 }
 
-/* Scroll sections */
-.scroll-sections {
-	margin-top: 100vh;
-	margin-bottom: 100vh;
+/* Collage Layout */
+.collage-container {
+	padding: 1rem;
+	margin: 60px auto 0;
+	max-width: 900px;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
 }
 
-.scroll-section {
-	height: 100vh;
+.collage {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 0.75rem;
 	width: 100%;
-	background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.05) 50%, rgba(255, 255, 255, 0) 100%);
-	margin-bottom: 2rem;
 }
 
-.main-gif {
+.collage-item {
+	position: relative;
+	overflow: hidden;
+	background: #f5f5f5;
+	transition: all 0.3s ease;
+	cursor: pointer;
+	aspect-ratio: 1;
+}
+
+.collage-item.large {
+	grid-column: span 2;
+	grid-row: span 2;
+}
+
+.collage-item.medium {
+	grid-column: span 1;
+	grid-row: span 1;
+}
+
+.collage-item.small {
+	grid-column: span 1;
+	grid-row: span 1;
+}
+
+.collage-item img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 	display: block;
+	transition: transform 0.3s ease;
 }
 
-/* Social links section */
-.social-links {
+.image-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(255, 255, 255, 0.9);
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
-	gap: 2rem;
-	padding: 2rem;
+	align-items: center;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	color: black;
+	text-align: center;
+	padding: 1rem;
 }
 
-.social-link {
-	font-size: 0.9rem;
+.image-overlay h3 {
+	font-size: 0.875rem;
+	letter-spacing: 0.05em;
+	margin-bottom: 0.25rem;
+}
+
+.image-overlay p {
+	font-size: 0.75rem;
+	opacity: 0.8;
+}
+
+.collage-item:hover {
+	transform: scale(1.03);
+	z-index: 2;
+}
+
+.collage-item:hover .image-overlay {
+	opacity: 1;
+}
+
+.text-sections {
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.text-section {
+	margin-bottom: 2rem;
 }
 
 /* Footer styles */
@@ -174,7 +261,18 @@ footer {
 	justify-content: flex-end;
 }
 
+.scroll-spacer {
+	position: relative;
+	width: 100%;
+}
+
 /* Responsive adjustments */
+@media (max-width: 1024px) {
+	.collage {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
 @media (max-width: 768px) {
 	.main-nav {
 		padding: 1rem;
@@ -191,6 +289,16 @@ footer {
 		align-items: center;
 	}
 
+	.collage {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 0.75rem;
+	}
+
+	.collage-item.large {
+		grid-column: span 1;
+		grid-row: span 1;
+	}
+
 	footer {
 		flex-direction: column;
 		gap: 1rem;
@@ -201,5 +309,15 @@ footer {
 	.footer-center,
 	.footer-right {
 		justify-content: center;
+	}
+}
+
+@media (max-width: 480px) {
+	.collage-container {
+		padding: 0.5rem;
+	}
+
+	.collage {
+		gap: 0.5rem;
 	}
 }

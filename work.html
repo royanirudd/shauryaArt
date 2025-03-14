@@ -5,68 +5,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Work - Artist Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200;300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200;300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/carousel.css">
     <script src="js/main.js" defer></script>
-    <script src="js/carousel.js" defer></script>
 </head>
 
 <body>
     <nav class="main-nav">
         <div class="nav-left">
-            <a href="index.html" class="name-link">Your First Last</a>
+            <a href="index.html" class="name-link">SHAURYA&nbsp;&nbsp;&nbsp;SUNDEEP</a>
         </div>
         <div class="nav-center">
             <span class="location-time" id="locationTime"></span>
         </div>
         <div class="nav-right">
-            <a href="work.html" class="nav-link">Work</a>
-            <a href="about.html" class="nav-link">About</a>
+            <a href="work.html" class="nav-link">WORK</a>
+            <a href="about.html" class="nav-link">ABOUT</a>
         </div>
     </nav>
 
-    <main class="content">
-        <div class="carousel-container">
-            <div class="carousel">
-                <div class="carousel-slide active">
-                    <img src="assets/art1.webp" alt="Work 1">
-                    <div class="caption">Caption for Work 1</div>
+    <main class="content work-content">
+        <div class="collage-container">
+            <div class="collage">
+                <!-- Row 1 -->
+                <div class="collage-item medium">
+                    <img src="assets/Final Square.jpg" alt="Final Square">
+                    <div class="image-overlay">
+                        <h3>FINAL SQUARE</h3>
+                        <p>100 x 100 cm</p>
+                    </div>
                 </div>
-                <div class="carousel-slide">
-                    <img src="assets/art2.webp" alt="Work 2">
-                    <div class="caption">Caption for Work 2</div>
+                <div class="collage-item medium">
+                    <img src="assets/IMG_20240422_170645.jpg" alt="Abstract Composition 1">
+                    <div class="image-overlay">
+                        <h3>ABSTRACT COMPOSITION 1</h3>
+                        <p>80 x 60 cm</p>
+                    </div>
                 </div>
-                <div class="carousel-slide">
-                    <img src="assets/art1.webp" alt="Work 3">
-                    <div class="caption">Caption for Work 3</div>
+                <div class="collage-item medium">
+                    <img src="assets/IMG_20240825_202004.jpg" alt="Abstract Composition 2">
+                    <div class="image-overlay">
+                        <h3>ABSTRACT COMPOSITION 2</h3>
+                        <p>80 x 60 cm</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="carousel-controls">
-                <div class="carousel-indicators">
-                    <button class="indicator active" data-index="0"></button>
-                    <button class="indicator" data-index="1"></button>
-                    <button class="indicator" data-index="2"></button>
+                <!-- Row 2 -->
+                <div class="collage-item medium">
+                    <img src="assets/IMG_20240825_202101.jpg" alt="Abstract Composition 3">
+                    <div class="image-overlay">
+                        <h3>ABSTRACT COMPOSITION 3</h3>
+                        <p>80 x 60 cm</p>
+                    </div>
                 </div>
-                <button class="carousel-button prev">&lt;</button>
-                <button class="carousel-button next">&gt;</button>
+                <div class="collage-item medium">
+                    <img src="assets/IMG_20240825_202242.jpg" alt="Abstract Composition 4">
+                    <div class="image-overlay">
+                        <h3>ABSTRACT COMPOSITION 4</h3>
+                        <p>80 x 60 cm</p>
+                    </div>
+                </div>
+                <div class="collage-item medium">
+                    <img src="assets/IMG_20240902_153650-01.jpeg" alt="Abstract Composition 5">
+                    <div class="image-overlay">
+                        <h3>ABSTRACT COMPOSITION 5</h3>
+                        <p>80 x 60 cm</p>
+                    </div>
+                </div>
+
+                <!-- Row 3 -->
+                <div class="collage-item medium">
+                    <img src="assets/IMG_20240906_125612.jpg" alt="Abstract Composition 6">
+                    <div class="image-overlay">
+                        <h3>ABSTRACT COMPOSITION 6</h3>
+                        <p>80 x 60 cm</p>
+                    </div>
+                </div>
+                <div class="collage-item medium">
+                    <img src="assets/IMG_20250119_195919.jpg" alt="Abstract Composition 7">
+                    <div class="image-overlay">
+                        <h3>ABSTRACT COMPOSITION 7</h3>
+                        <p>80 x 60 cm</p>
+                    </div>
+                </div>
+                <div class="collage-item medium">
+                    <img src="assets/IMG-20231230-WA0000.jpg" alt="Abstract Composition 8">
+                    <div class="image-overlay">
+                        <h3>ABSTRACT COMPOSITION 8</h3>
+                        <p>80 x 60 cm</p>
+                    </div>
+                </div>
+
+                <!-- Row 4 -->
+                <div class="collage-item medium">
+                    <img src="assets/Untitled_Artwork (4).jpg" alt="Abstract Composition 9">
+                    <div class="image-overlay">
+                        <h3>ABSTRACT COMPOSITION 9</h3>
+                        <p>80 x 60 cm</p>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
 
     <div class="social-links">
-        <a href="mailto:your@email.com" class="social-link">Email</a>
-        <a href="https://instagram.com/youraccount" class="social-link">Instagram</a>
-        <a href="https://yourportfolio.com" class="social-link">Portfolio</a>
+        <a href="mailto:your@email.com" class="social-link">EMAIL</a>
+        <a href="https://instagram.com/youraccount" class="social-link">INSTAGRAM</a>
+        <a href="https://yourportfolio.com" class="social-link">PORTFOLIO</a>
     </div>
 
     <footer>
-        <div class="footer-left">
-            <span id="footerLocationTime"></span>
-        </div>
         <div class="footer-center">
-            <span>All Rights Reserved</span>
+            <span>ALL RIGHTS RESERVED</span>
         </div>
         <div class="footer-right">
             <span>2025</span>
