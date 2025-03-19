@@ -1,0 +1,57 @@
+/* Tablet (768px-1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+	.gif-container {
+		width: 90vw;
+		height: 90vh;
+	}
+}
+
+/* Mobile (<768px) */
+@media (max-width: 768px) {
+	.main-nav {
+		background: transparent !important;
+		backdrop-filter: none;
+		-webkit-backdrop-filter: none;
+	}
+
+	.gif-container {
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		top: 0;
+		left: 0;
+		transform: none;
+	}
+
+	.main-video {
+		display: none;
+	}
+
+	.mobile-image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: url('../../assets/0.jpg');
+		background-size: cover;
+		background-position: center;
+	}
+
+	.name-link,
+	.nav-link {
+		color: black !important;
+	}
+
+	.text-sections {
+		visibility: hidden;
+	}
+
+	.scroll-spacer {
+		display: none;
+	}
+
+	.name-letter.fade {
+		opacity: 1 !important;
+	}
+}

@@ -7,19 +7,24 @@
     <title>Work - Artist Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mobile/base.css">
+    <link rel="stylesheet" href="css/mobile/work.css">
 </head>
 
 <body>
     <nav class="main-nav">
         <div class="logo">
-            <a href="index.html"
-                class="name-link">SHAURYA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SUNDEEP</a>
+            <a href="index.html" class="name-link">
+                <span class="name-text">SHAURYA</span>
+                <span class="name-spacer"></span>
+                <span class="name-text">SUNDEEP</span>
+            </a>
         </div>
         <div class="nav-center">
             <span class="location-time" id="locationTime"></span>
         </div>
         <div class="nav-right">
-            <a href="work.html" class="nav-link">WORK</a>
+            <a href="work.html" class="nav-link active">WORK</a>
             <a href="about.html" class="nav-link">ABOUT</a>
         </div>
     </nav>
@@ -27,83 +32,94 @@
     <main class="content work-content">
         <div class="collage-container">
             <div class="collage">
-                <!-- Row 1 -->
-                <div class="collage-item medium">
-                    <img src="assets/Final Square.jpg" alt="Final Square">
-                    <div class="image-overlay">
-                        <h3>FINAL SQUARE</h3>
-                        <p>100 x 100 cm</p>
+
+                <!-- Row 4: 3 portraits -->
+                <div class="collage-row">
+                    <div class="collage-item" style="flex: 0.73">
+                        <img src="assets/10.jpg" alt="Artwork 10">
+                        <div class="image-overlay">
+                            <h3>ARTWORK 10</h3>
+                        </div>
+                    </div>
+                    <div class="collage-item" style="flex: 0.75">
+                        <img src="assets/1.jpg" alt="Artwork 1">
+                        <div class="image-overlay">
+                            <h3>ARTWORK 1</h3>
+                        </div>
+                    </div>
+                    <div class="collage-item" style="flex: 0.63">
+                        <img src="assets/0.jpg" alt="Artwork 0">
+                        <div class="image-overlay">
+                            <h3>ARTWORK 0</h3>
+                        </div>
                     </div>
                 </div>
-                <div class="collage-item medium">
-                    <img src="assets/IMG_20240422_170645.jpg" alt="Abstract Composition 1">
-                    <div class="image-overlay">
-                        <h3>ABSTRACT COMPOSITION 1</h3>
-                        <p>80 x 60 cm</p>
+                <!-- Row 1: Landscape + 2 portraits -->
+                <div class="collage-row">
+                    <div class="collage-item" style="flex: 1.40">
+                        <img src="assets/2.jpg" alt="Artwork 2">
+                        <div class="image-overlay">
+                            <h3>ARTWORK 2</h3>
+                        </div>
                     </div>
-                </div>
-                <div class="collage-item medium">
-                    <img src="assets/IMG_20240825_202004.jpg" alt="Abstract Composition 2">
-                    <div class="image-overlay">
-                        <h3>ABSTRACT COMPOSITION 2</h3>
-                        <p>80 x 60 cm</p>
+                    <div class="collage-item" style="flex: 0.71">
+                        <img src="assets/3.jpg" alt="Artwork 3">
+                        <div class="image-overlay">
+                            <h3>ARTWORK 3</h3>
+                        </div>
+                    </div>
+                    <div class="collage-item" style="flex: 0.75">
+                        <img src="assets/4.jpg" alt="Artwork 4">
+                        <div class="image-overlay">
+                            <h3>ARTWORK 4</h3>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Row 2 -->
-                <div class="collage-item medium">
-                    <img src="assets/IMG_20240825_202101.jpg" alt="Abstract Composition 3">
-                    <div class="image-overlay">
-                        <h3>ABSTRACT COMPOSITION 3</h3>
-                        <p>80 x 60 cm</p>
+                <!-- Row 2: Landscape + 2 portraits -->
+                <div class="collage-row">
+                    <div class="collage-item" style="flex: 1.33">
+                        <img src="assets/13.jpg" alt="Artwork 13">
+                        <div class="image-overlay">
+                            <h3>ARTWORK 13</h3>
+                        </div>
                     </div>
-                </div>
-                <div class="collage-item medium">
-                    <img src="assets/IMG_20240825_202242.jpg" alt="Abstract Composition 4">
-                    <div class="image-overlay">
-                        <h3>ABSTRACT COMPOSITION 4</h3>
-                        <p>80 x 60 cm</p>
+                    <div class="collage-item" style="flex: 0.71">
+                        <img src="assets/5.jpg" alt="Artwork 5">
+                        <div class="image-overlay">
+                            <h3>ARTWORK 5</h3>
+                        </div>
                     </div>
-                </div>
-                <div class="collage-item medium">
-                    <img src="assets/IMG_20240902_153650-01.jpeg" alt="Abstract Composition 5">
-                    <div class="image-overlay">
-                        <h3>ABSTRACT COMPOSITION 5</h3>
-                        <p>80 x 60 cm</p>
-                    </div>
-                </div>
-
-                <!-- Row 3 -->
-                <div class="collage-item medium">
-                    <img src="assets/IMG_20240906_125612.jpg" alt="Abstract Composition 6">
-                    <div class="image-overlay">
-                        <h3>ABSTRACT COMPOSITION 6</h3>
-                        <p>80 x 60 cm</p>
-                    </div>
-                </div>
-                <div class="collage-item medium">
-                    <img src="assets/IMG_20250119_195919.jpg" alt="Abstract Composition 7">
-                    <div class="image-overlay">
-                        <h3>ABSTRACT COMPOSITION 7</h3>
-                        <p>80 x 60 cm</p>
-                    </div>
-                </div>
-                <div class="collage-item medium">
-                    <img src="assets/IMG-20231230-WA0000.jpg" alt="Abstract Composition 8">
-                    <div class="image-overlay">
-                        <h3>ABSTRACT COMPOSITION 8</h3>
-                        <p>80 x 60 cm</p>
+                    <div class="collage-item" style="flex: 0.71">
+                        <img src="assets/6.jpg" alt="Artwork 6">
+                        <div class="image-overlay">
+                            <h3>ARTWORK 6</h3>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Row 4 -->
-                <div class="collage-item medium">
-                    <img src="assets/Untitled_Artwork (4).jpg" alt="Abstract Composition 9">
-                    <div class="image-overlay">
-                        <h3>ABSTRACT COMPOSITION 9</h3>
-                        <p>80 x 60 cm</p>
+                <!-- Row 3: 3 portraits -->
+                <div class="collage-row">
+                    <div class="collage-item" style="flex: 0.75">
+                        <img src="assets/7.jpeg" alt="Artwork 7">
+                        <div class="image-overlay">
+                            <h3>ARTWORK 7</h3>
+                        </div>
+                    </div>
+                    <div class="collage-item" style="flex: 0.70">
+                        <img src="assets/8.jpg" alt="Artwork 8">
+                        <div class="image-overlay">
+                            <h3>ARTWORK 8</h3>
+                        </div>
+                    </div>
+                    <div class="collage-item" style="flex: 0.61">
+                        <img src="assets/9.jpg" alt="Artwork 9">
+                        <div class="image-overlay">
+                            <h3>ARTWORK 9</h3>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </main>

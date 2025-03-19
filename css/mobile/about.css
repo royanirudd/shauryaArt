@@ -1,0 +1,39 @@
+/* Tablet (768px-1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+	.about-container {
+		padding: 2rem;
+		margin: 2rem auto;
+	}
+
+	.about-grid {
+		gap: 3rem;
+	}
+}
+
+/* Mobile (<768px) */
+@media (max-width: 768px) {
+	.about-container {
+		padding: 1rem;
+		margin-top: 120px;
+		margin: 120px auto 1rem auto;
+	}
+
+	.about-grid {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
+
+	.about-text {
+		position: static;
+	}
+
+	.bio-text p {
+		opacity: 1;
+		transform: none;
+		animation: none;
+	}
+
+	.about-images {
+		display: none;
+	}
+}
