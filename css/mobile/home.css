@@ -54,4 +54,12 @@
 	.name-letter.fade {
 		opacity: 1 !important;
 	}
+
+	.social-links a {
+		color: white;
+	}
+
+	.social-links a:not(.name-link)::after {
+		display: none;
+	}
 }
