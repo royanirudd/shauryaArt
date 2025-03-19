@@ -43,7 +43,6 @@
 		justify-content: center;
 		align-items: center;
 		flex-direction: row;
-		/* Keep it horizontal */
 		white-space: nowrap;
 	}
 
@@ -54,7 +53,6 @@
 
 	.spacer {
 		width: 2rem;
-		/* Reduced spacing for mobile */
 	}
 
 	/* For work.html and about.html */
@@ -85,6 +83,7 @@
 		align-items: center;
 		gap: 1rem;
 	}
+
 
 	footer {
 		flex-direction: column;

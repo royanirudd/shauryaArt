@@ -6,13 +6,12 @@
 
 .about-grid {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr;
 	gap: 4rem;
 	align-items: start;
 }
 
 .about-text {
-	position: sticky;
 	top: 100px;
 }
 
@@ -20,6 +19,7 @@
 	font-size: 2rem;
 	margin-bottom: 2rem;
 	font-weight: normal;
+	text-align: center;
 }
 
 .bio-text p {
@@ -82,6 +82,7 @@
 @media (max-width: 1024px) {
 	.about-grid {
 		gap: 2rem;
+		grid-template-columns: 1fr;
 	}
 }
 

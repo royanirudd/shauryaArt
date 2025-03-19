@@ -277,13 +277,17 @@ a:not(.name-link):hover::after {
 
 
 .image-overlay h3 {
+	font-family: 'Jost', sans-serif;
+	font-weight: 500;
 	font-size: 0.875rem;
 	letter-spacing: 0.05em;
 	margin-bottom: 0.25rem;
 }
 
 .image-overlay p {
-	font-size: 0.75rem;
+	font-family: 'Jost', sans-serif;
+	font-weight: 300;
+	font-size: 0.875rem;
 	opacity: 0.8;
 }
 
@@ -414,7 +418,7 @@ footer {
 	align-items: center;
 	z-index: 2000;
 	cursor: pointer;
-	padding: 2rem;
+	padding: 0rem;
 }
 
 .modal-content {
@@ -428,8 +432,8 @@ footer {
 }
 
 .modal-content img {
-	max-width: min(800px, 70vw);
-	max-height: 70vh;
+	max-width: 90vw;
+	max-height: 98vh;
 	width: auto;
 	height: auto;
 	object-fit: contain;
