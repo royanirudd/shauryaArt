@@ -1,8 +1,8 @@
-/* mobile/work.css */
 /* Tablet (768px-1024px) */
 @media (max-width: 1024px) and (min-width: 769px) {
 	.collage-container {
-		width: 90%;
+		width: 75%;
+		/* Reduced from 90% */
 		padding: 1.5rem;
 	}
 
@@ -14,9 +14,14 @@
 /* Mobile (<768px) */
 @media (max-width: 768px) {
 	.collage-container {
-		width: 100%;
+		width: 85%;
+		/* Reduced from 100% */
 		padding: 1rem;
 		margin-bottom: 2rem;
+		max-width: 500px;
+		/* Add max-width for mobile */
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	.collage {
@@ -27,16 +32,17 @@
 
 	.collage-row {
 		display: contents;
-		/* This removes the row structure */
 	}
 
 	.collage-item {
 		height: auto;
 		aspect-ratio: 3/4;
 		width: 100%;
+		max-height: 500px;
+		/* Add max-height for mobile items */
 	}
 
-	/* Reorder images */
+	/* Keep the existing order rules */
 	.collage-item:has(img[src*="0.jpg"]) {
 		order: 1;
 	}
@@ -98,7 +104,6 @@
 		transform: none;
 	}
 
-	/* Maintain image aspect ratios */
 	.collage-item img {
 		width: 100%;
 		height: 100%;
